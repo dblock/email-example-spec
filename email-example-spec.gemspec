@@ -12,5 +12,6 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
   s.homepage = 'http://github.com/dblock/email-example-spec'
   s.licenses = ['MIT']
-  s.summary = 'Spec matches for e-mail examples.'
+  s.summary = 'Integration testing with e-mail examples.'
+  s.add_dependency 'actionmailer'
 end

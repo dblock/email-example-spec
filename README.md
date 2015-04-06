@@ -3,6 +3,39 @@ ExampleExampleSpec
 
 [![Build Status](https://travis-ci.org/dblock/email-example-spec.png)](https://travis-ci.org/dblock/email-example-spec)
 
+VCR for e-mail templates.
+
+## Install
+
+```ruby
+gem 'email-example-spec'
+```
+
+## Configure
+
+Configure the root directory of your mail fixtures in *spec/spec_helper.rb*.
+
+```ruby
+EmailExampleSpec.configure do |config|
+  config.record = true # record an new e-mails, don't commit
+  config.fixture_path = File.join(Rails.root, 'spec/support/fixtures/emails')
+end
+```
+
+## Use
+
+```ruby
+describe WelcomeMailer do
+  let(:user) { User.new }
+  subject do
+    WelcomeMailer.welcome(user)
+  end
+  it 'works' do
+    expect(subject).to match_email_example_in 'welcome_mail.txt'
+  end
+end
+```
+
 ## Contributing
 
 See [CONTRIBUTING](CONTRIBUTING.md).
