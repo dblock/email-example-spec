@@ -17,7 +17,7 @@ Configure the root directory of your mail fixtures in *spec/spec_helper.rb*.
 
 ```ruby
 EmailExampleSpec.configure do |config|
-  config.record = true # record an new e-mails, don't commit
+  config.record = true # record new e-mails, don't commit this!
   config.fixture_path = File.join(Rails.root, 'spec/support/fixtures/emails')
 end
 ```
