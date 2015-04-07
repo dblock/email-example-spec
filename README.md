@@ -1,5 +1,5 @@
-ExampleExampleSpec
-==================
+EmailExampleSpec
+================
 
 [![Build Status](https://travis-ci.org/dblock/email-example-spec.png)](https://travis-ci.org/dblock/email-example-spec)
 [![Gem Version](https://badge.fury.io/rb/email-example-spec.svg)](http://badge.fury.io/rb/email-example-spec)
