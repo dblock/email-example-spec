@@ -6,13 +6,13 @@ ExampleExampleSpec
 
 VCR for e-mail templates.
 
-## Install
+## Installation
 
 ```ruby
 gem 'email-example-spec'
 ```
 
-## Configure
+## Configuration
 
 Configure the root directory of your mail fixtures in *spec/spec_helper.rb*.
 
@@ -23,7 +23,7 @@ EmailExampleSpec.configure do |config|
 end
 ```
 
-## Use
+## Usage
 
 ```ruby
 describe WelcomeMailer do
@@ -36,6 +36,10 @@ describe WelcomeMailer do
   end
 end
 ```
+
+## Details
+
+This gem patches e-mail dates, message IDs and content-type boundaries and exports e-mail contents, including headers, into a file that can be read in subsequent runs. It essentially provides integration testing for e-mail templates.
 
 ## Contributing
 
